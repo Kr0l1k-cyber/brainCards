@@ -15,6 +15,9 @@ const initApp = () => {
 
     headerObj.headerLogoLink.addEventListener('click', returnIndex);
 
+    headerObj.headerBtn.addEventListener('click', () => {
+        headerObj.updateHeaderTitle('Новая категория');
+    });
 };
 
 
