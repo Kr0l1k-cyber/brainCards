@@ -26,7 +26,12 @@ export const createHeader = (parent) => {
         textContent: 'Категории',
     })
 
-    container.append(headerLogoLink, headerTitle);
+    const headerBtn = createElement('button', {
+        className: 'header__btn',
+        textContent: 'Добавить категорию',
+    })
+
+    container.append(headerLogoLink, headerTitle, headerBtn);
 };
 /* 
 
