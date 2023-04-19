@@ -4,8 +4,7 @@ import { createElement } from "../helper/createElement.js";
 export const createHeader = (parent) => {
     const container = createElement('div', {
         className: 'container header__container',
-    });
-    container.className = 'container'
+    });    
 
     parent.append(container);
 
@@ -21,7 +20,13 @@ export const createHeader = (parent) => {
     });
     
     headerLogoLink.append(logo);
-    container.append(headerLogoLink);
+
+    const headerTitle = createElement('h2', {
+        className: 'header__subtitle',
+        textContent: 'Категории',
+    })
+
+    container.append(headerLogoLink, headerTitle);
 };
 /* 
 
