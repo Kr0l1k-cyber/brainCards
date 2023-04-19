@@ -1,15 +1,19 @@
 'use strict';
+import { createElement } from "../helper/createElement.js";
 
 export const createHeader = (parent) => {
-    const container = document.createElement('div');
+    const container = createElement('div', {
+        className: 'container',
+    });
     container.className = 'container'
 
     parent.append(container);
 
-    const logo = new Image();
-    logo.src = 'img/logo.svg';
-    logo.className = 'header__logo';
-    logo.alt = 'Логотип сервиса Brain cards';
-
+    const logo = createElement('img', {
+        src: 'img/logo.svg',
+        className: 'header__logo',
+        alt: 'Логотип сервиса Brain cards',
+    });
+    
     container.append(logo);
 }
