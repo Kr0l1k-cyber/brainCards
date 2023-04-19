@@ -1,4 +1,5 @@
 'use strict';
+
 import { createElement } from "../helper/createElement.js";
 
 export const createHeader = (parent) => {
@@ -11,7 +12,7 @@ export const createHeader = (parent) => {
     const headerLogoLink = createElement('a', {
         href:'#',
         className: 'header__logo-link',
-    })
+    });
 
     const logo = createElement('img', {
         src: 'img/logo.svg',
@@ -24,23 +25,21 @@ export const createHeader = (parent) => {
     const headerTitle = createElement('h2', {
         className: 'header__subtitle',
         textContent: 'Категории',
-    })
+    });
 
     const headerBtn = createElement('button', {
         className: 'header__btn',
         textContent: 'Добавить категорию',
-    })
+    });
 
     container.append(headerLogoLink, headerTitle, headerBtn);
-};
-/* 
 
-    <div class="container header__container">
-        <a class="header__logo-link" href="#">
-            <img class="header__logo" src="img/logo.svg" alt="Логотип сервиса Brain Cards">
-        </a>
-        <h2 class="header__subtitle">Категории</h2>
-        <button class="header__btn">Добавить категорию</button>
-    </div>
-</header>
-*/
+    const updateHeaderTitle = title => {
+        headerTitle.textContent = title;
+    };
+
+    return {
+        headerLogoLink, headerBtn, updateHeaderTitle
+    };
+};
+

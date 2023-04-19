@@ -88,6 +88,10 @@ p {
   width: 200px;
 }
 
+.header__logo-link {
+  justify-self: start;
+}
+
 .header__subtitle {
   text-align: center;
   justify-self: center;
